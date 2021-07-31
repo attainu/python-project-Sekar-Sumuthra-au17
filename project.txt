@@ -1,0 +1,37 @@
+My project is "Maze Solver"
+We can do this project using bfs, dfs and recursion algos.
+I have done this using backtracking. We have to solve square matrix maze and find the destionation from the source.
+This is the aim of this project. 
+If there is no path to reach the destination, the output should be -1. 
+In the square matrix, 1 is a path and 0 is a blocked path.
+In the input matrix, each elements and its position will be checked. 
+The new matrix will be created and all the elements should be assigned as 0's.
+To find the path in the input matrix, positions will be checked in all the directions.
+During the movement, the position will be checked as valid or not.
+Which means, the position is not above the row and columns. 
+The new matrix elements will be replaced by 1's based on the input matrix path. 
+The final output matrix will be generated in the output file. 
+
+Here, I have used oops concept to achieve the goal of the project. 
+There are four modules are created, those are inputfile.txt, main, maze_solver and outputfile.txt
+In the inputfile, the input matrix will be updated. 
+In the main, I have imported fileinput module. 
+As we know, This module implements a helper class and functions to quickly write a loop over standard input or a list of files.
+Created the class Maze_path to create the coordinates (x and y) and move the pointers to reach the path
+The function solve_maze, create a maxtrix with 0 to reach the target. 
+The function way_Maze, check all the pointers (both x and y) in both matrices (input and temp).
+The positions will be checked in the matrix and the pointers will move.
+If the matrix position is invalid, it will return false. 
+After validation, the pointer will move all the directions.
+The function pointer_mover in main module will done this.
+The visited paths will be checked in Remove_Path function. 
+If the paths are repeated, it will be removed. 
+
+Input.text
+The input square matrix will be taken and fileinput module will be used to access the input file.
+
+In maze_solver file, argparse library has been imported. 
+As we know, The argparse module makes it easy to write user-friendly command-line interfaces.
+And, imported main function from folder Project_Maze.
+
+OutputFile.txt will contain an nxn matrix with 0 and 1 as element but 1 will be present at source to destination path only or -1(for edge case “If doesn’t exist any path”)
